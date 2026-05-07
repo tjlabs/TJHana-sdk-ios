@@ -42,27 +42,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0C965220A7D6A6D1C0B95B7726174F60 /* TJLabsJupiter.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = TJLabsJupiter.xcframework; path = TJHanaSDK/Frameworks/TJLabsJupiter.xcframework; sourceTree = "<group>"; };
+		0C965220A7D6A6D1C0B95B7726174F60 /* TJLabsJupiter.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; name = TJLabsJupiter.xcframework; path = TJHanaSDK/Frameworks/TJLabsJupiter.xcframework; sourceTree = "<group>"; };
 		17A376C907F63489016D320D240D4F6E /* TJJupiterManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TJJupiterManager.swift; path = TJHanaSDK/Classes/TJJupiterManager.swift; sourceTree = "<group>"; };
 		18407091561DD51D38B9E4E7C2CA8CC2 /* Pods-TJHanaSDK_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TJHanaSDK_Tests-umbrella.h"; sourceTree = "<group>"; };
-		19F22F0D24C10AF3005B8052C3098C7A /* TJLabsAuth.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = TJLabsAuth.xcframework; path = TJHanaSDK/Frameworks/TJLabsAuth.xcframework; sourceTree = "<group>"; };
-		1AF4F65E356C3AFE99F7BB312B155E00 /* TJLabsCommon.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = TJLabsCommon.xcframework; path = TJHanaSDK/Frameworks/TJLabsCommon.xcframework; sourceTree = "<group>"; };
+		19F22F0D24C10AF3005B8052C3098C7A /* TJLabsAuth.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; name = TJLabsAuth.xcframework; path = TJHanaSDK/Frameworks/TJLabsAuth.xcframework; sourceTree = "<group>"; };
+		1AF4F65E356C3AFE99F7BB312B155E00 /* TJLabsCommon.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; name = TJLabsCommon.xcframework; path = TJHanaSDK/Frameworks/TJLabsCommon.xcframework; sourceTree = "<group>"; };
 		1B9E5940ACE12500031AF98D2D3A940A /* TJHanaSDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TJHanaSDK-dummy.m"; sourceTree = "<group>"; };
-		1BEC0DCD6D1FD627037537AA771D01F5 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		1BEC0DCD6D1FD627037537AA771D01F5 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		1E4A7AEA539952F688258D5767E08472 /* Pods-TJHanaSDK_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TJHanaSDK_Example-umbrella.h"; sourceTree = "<group>"; };
 		23B27101143063FEEEA32D9591E773A1 /* TJHanaSDK-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TJHanaSDK-prefix.pch"; sourceTree = "<group>"; };
 		2999FA23834631E0D09E459C31C549BE /* TJHanaSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TJHanaSDK.release.xcconfig; sourceTree = "<group>"; };
-		36E735A1ADCEE17AF745C071C3B571E2 /* TJLabsHana.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = TJLabsHana.xcframework; path = TJHanaSDK/Frameworks/TJLabsHana.xcframework; sourceTree = "<group>"; };
+		36E735A1ADCEE17AF745C071C3B571E2 /* TJLabsHana.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; name = TJLabsHana.xcframework; path = TJHanaSDK/Frameworks/TJLabsHana.xcframework; sourceTree = "<group>"; };
 		3732ACA21888A242BB8C91256B305D62 /* Pods-TJHanaSDK_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TJHanaSDK_Example.release.xcconfig"; sourceTree = "<group>"; };
 		384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		38AC4C2DF78FBDE27049B65DAA072E57 /* Pods-TJHanaSDK_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TJHanaSDK_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		3A42D1143761002EA597B2CEAE065B55 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		3A42D1143761002EA597B2CEAE065B55 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		4069BA9A5CDE6A254D9C07B6E9399C37 /* Pods-TJHanaSDK_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TJHanaSDK_Example-frameworks.sh"; sourceTree = "<group>"; };
 		55331EECDC807CF1DBB2CBDB74312EEE /* Pods-TJHanaSDK_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TJHanaSDK_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		57E469A8389400E6A1D990C03437C6C3 /* WrapperExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WrapperExtension.swift; path = TJHanaSDK/Classes/WrapperExtension.swift; sourceTree = "<group>"; };
 		591A53286188DE5E4E066347D4D9CD2E /* Pods-TJHanaSDK_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TJHanaSDK_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		5A561AF4084484377BC5BC6DC12C7CD7 /* Pods-TJHanaSDK_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-TJHanaSDK_Example"; path = Pods_TJHanaSDK_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		60018AC156FF46169AFEA13964BDE42C /* TJHanaSDK */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TJHanaSDK; path = TJHanaSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A561AF4084484377BC5BC6DC12C7CD7 /* Pods_TJHanaSDK_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TJHanaSDK_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		60018AC156FF46169AFEA13964BDE42C /* TJHanaSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TJHanaSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AB1DDCEE5DE2D345444A95F11ED0F94 /* TJHanaSDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TJHanaSDK-umbrella.h"; sourceTree = "<group>"; };
 		6EB39C082C896AAD14A3ADC8490345F3 /* TJHanaSDK-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "TJHanaSDK-xcframeworks.sh"; sourceTree = "<group>"; };
 		74553B7C3215145F51C541DD8A42D674 /* TJVenusManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TJVenusManager.swift; path = TJHanaSDK/Classes/TJVenusManager.swift; sourceTree = "<group>"; };
@@ -70,14 +70,14 @@
 		7EF62C91F55E76212D86FCDB7A55BBA9 /* TJHanaSDK-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "TJHanaSDK-Info.plist"; sourceTree = "<group>"; };
 		9694C76160FCCF0EDC5A038D2C74A4E8 /* TJHanaAuth.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TJHanaAuth.swift; path = TJHanaSDK/Classes/TJHanaAuth.swift; sourceTree = "<group>"; };
 		9AFA3A443CFAA0E74392981F21DB869E /* Pods-TJHanaSDK_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TJHanaSDK_Tests-Info.plist"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		AC150DF299B5F3BBDFBB7BE1105AC41A /* Pods-TJHanaSDK_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TJHanaSDK_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		B2C22A5526D961D7AD8D77D063D1AAAD /* TJHanaSDK.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = TJHanaSDK.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B2C22A5526D961D7AD8D77D063D1AAAD /* TJHanaSDK.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = TJHanaSDK.podspec; sourceTree = "<group>"; tabWidth = 2; };
 		B36291E86A13EB72D700B9ED36210DE4 /* Pods-TJHanaSDK_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TJHanaSDK_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		B4B928E24E8003BA5FFB95058459A027 /* Pods-TJHanaSDK_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TJHanaSDK_Example-dummy.m"; sourceTree = "<group>"; };
 		BD842701E5372D9D809B57907DD7A93B /* Pods-TJHanaSDK_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TJHanaSDK_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		C4E4ECA274A460B398E73CB9E61F7355 /* Pods-TJHanaSDK_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-TJHanaSDK_Tests"; path = Pods_TJHanaSDK_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C67822F5A82BD968EEB7DDBA665CB7E4 /* TJLabsResource.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = TJLabsResource.xcframework; path = TJHanaSDK/Frameworks/TJLabsResource.xcframework; sourceTree = "<group>"; };
+		C4E4ECA274A460B398E73CB9E61F7355 /* Pods_TJHanaSDK_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TJHanaSDK_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C67822F5A82BD968EEB7DDBA665CB7E4 /* TJLabsResource.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; name = TJLabsResource.xcframework; path = TJHanaSDK/Frameworks/TJLabsResource.xcframework; sourceTree = "<group>"; };
 		D179E977DD4AD31056498E62FEF3C132 /* Pods-TJHanaSDK_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TJHanaSDK_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		D295097D6A330D920852B9481BBA18F3 /* Pods-TJHanaSDK_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TJHanaSDK_Example.modulemap"; sourceTree = "<group>"; };
 		D4778833C4672DE846C96EBCA72238F2 /* Pods-TJHanaSDK_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TJHanaSDK_Tests.modulemap"; sourceTree = "<group>"; };
@@ -243,9 +243,9 @@
 		E04C2AC56F11721C5E906A756B5859B8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5A561AF4084484377BC5BC6DC12C7CD7 /* Pods-TJHanaSDK_Example */,
-				C4E4ECA274A460B398E73CB9E61F7355 /* Pods-TJHanaSDK_Tests */,
-				60018AC156FF46169AFEA13964BDE42C /* TJHanaSDK */,
+				5A561AF4084484377BC5BC6DC12C7CD7 /* Pods_TJHanaSDK_Example.framework */,
+				C4E4ECA274A460B398E73CB9E61F7355 /* Pods_TJHanaSDK_Tests.framework */,
+				60018AC156FF46169AFEA13964BDE42C /* TJHanaSDK.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -304,7 +304,7 @@
 			);
 			name = "Pods-TJHanaSDK_Tests";
 			productName = Pods_TJHanaSDK_Tests;
-			productReference = C4E4ECA274A460B398E73CB9E61F7355 /* Pods-TJHanaSDK_Tests */;
+			productReference = C4E4ECA274A460B398E73CB9E61F7355 /* Pods_TJHanaSDK_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		18C80F18133F34A7DA0E0F9F8B480332 /* Pods-TJHanaSDK_Example */ = {
@@ -323,7 +323,7 @@
 			);
 			name = "Pods-TJHanaSDK_Example";
 			productName = Pods_TJHanaSDK_Example;
-			productReference = 5A561AF4084484377BC5BC6DC12C7CD7 /* Pods-TJHanaSDK_Example */;
+			productReference = 5A561AF4084484377BC5BC6DC12C7CD7 /* Pods_TJHanaSDK_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		1EC69B0A9524D7E6B76C6829CE868C33 /* TJHanaSDK */ = {
@@ -342,7 +342,7 @@
 			);
 			name = TJHanaSDK;
 			productName = TJHanaSDK;
-			productReference = 60018AC156FF46169AFEA13964BDE42C /* TJHanaSDK */;
+			productReference = 60018AC156FF46169AFEA13964BDE42C /* TJHanaSDK.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -363,8 +363,6 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			minimizedProjectReferenceProxies = 0;
-			preferredProjectObjectVersion = 77;
 			productRefGroup = E04C2AC56F11721C5E906A756B5859B8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -533,8 +531,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
