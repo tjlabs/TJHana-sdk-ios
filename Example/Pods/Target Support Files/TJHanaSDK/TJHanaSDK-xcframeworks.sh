@@ -29,6 +29,12 @@ variant_for_slice()
   "TJLabsCommon.xcframework/ios-arm64_x86_64-simulator")
     echo "simulator"
     ;;
+  "TJLabsHana.xcframework/ios-arm64")
+    echo ""
+    ;;
+  "TJLabsHana.xcframework/ios-arm64_x86_64-simulator")
+    echo "simulator"
+    ;;
   "TJLabsJupiter.xcframework/ios-arm64")
     echo ""
     ;;
@@ -57,6 +63,12 @@ archs_for_slice()
     echo "arm64"
     ;;
   "TJLabsCommon.xcframework/ios-arm64_x86_64-simulator")
+    echo "arm64 x86_64"
+    ;;
+  "TJLabsHana.xcframework/ios-arm64")
+    echo "arm64"
+    ;;
+  "TJLabsHana.xcframework/ios-arm64_x86_64-simulator")
     echo "arm64 x86_64"
     ;;
   "TJLabsJupiter.xcframework/ios-arm64")
@@ -155,6 +167,7 @@ install_xcframework() {
 
 install_xcframework "${PODS_ROOT}/../../TJHanaSDK/Frameworks/TJLabsAuth.xcframework" "TJHanaSDK" "framework" "ios-arm64" "ios-arm64_x86_64-simulator"
 install_xcframework "${PODS_ROOT}/../../TJHanaSDK/Frameworks/TJLabsCommon.xcframework" "TJHanaSDK" "framework" "ios-arm64" "ios-arm64_x86_64-simulator"
+install_xcframework "${PODS_ROOT}/../../TJHanaSDK/Frameworks/TJLabsHana.xcframework" "TJHanaSDK" "framework" "ios-arm64" "ios-arm64_x86_64-simulator"
 install_xcframework "${PODS_ROOT}/../../TJHanaSDK/Frameworks/TJLabsJupiter.xcframework" "TJHanaSDK" "framework" "ios-arm64" "ios-arm64_x86_64-simulator"
 install_xcframework "${PODS_ROOT}/../../TJHanaSDK/Frameworks/TJLabsResource.xcframework" "TJHanaSDK" "framework" "ios-arm64" "ios-arm64_x86_64-simulator"
 
