@@ -63,6 +63,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 - If you need a more detailed guide, please refer to the links below.
 - SDK Guide: https://tjlabs.notion.site/Hana-API-Reference-335aef6d5b728045813bfb783b945940?source=copy_link
 - Authentication Guide: https://www.notion.so/tjlabs/SDK-Authorization-33eaef6d5b728034856ddc23489588f0?source=copy_link
+- Demo Application : https://github.com/tjlabs/TJHana-demo-ios.git
 
 ### 1. Import
 
@@ -371,9 +372,7 @@ public enum JupiterServiceCode: Int {
     case NETWORK_DISCONNECT = 7
 }
 ```
-
 ---
-
 ## 📄 License
 
 See the [LICENSE](LICENSE) file for details.
