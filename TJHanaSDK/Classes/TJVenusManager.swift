@@ -22,11 +22,11 @@ public class TJVenusManager: TJLabsHana.VenusServiceManagerDelegate {
     public weak var delegate: TJVenuseManagerDelegate?
     var serviceManager: VenusServiceManager?
     
-    public init(id: String, region: String = HanaRegion.KOREA.rawValue, sectorId: Int, forceUpdate: Bool = false) {
+    public init(id: String, sectorId: Int = HANA_SECTOR_ID, forceUpdate: Bool = false) {
         self.id = id
         self.sectorId = sectorId
         
-        self.serviceManager = VenusServiceManager(id: id, region: region, sectorId: sectorId, forceUpdate: forceUpdate)
+        self.serviceManager = VenusServiceManager(id: id, region: HanaRegion.KOREA.rawValue, sectorId: sectorId, forceUpdate: forceUpdate)
         self.serviceManager?.delegate = self
     }
     

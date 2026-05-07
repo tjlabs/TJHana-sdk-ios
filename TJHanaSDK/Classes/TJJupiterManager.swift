@@ -1,6 +1,7 @@
 
 import Foundation
 import TJLabsJupiter
+import TJLabsHana
     
 public class TJJupiterManager: NavigationManagerDelegate {
     public func onInitSuccess(_ isSuccess: Bool, _ code: TJLabsJupiter.InitErrorCode?) {
@@ -46,11 +47,11 @@ public class TJJupiterManager: NavigationManagerDelegate {
     
     var serviceManager: NavigationManager?
     
-    public init(id: String, region: String = HanaRegion.KOREA.rawValue, sectorId: Int, debugOption: Bool = false) {
+    public init(id: String, sectorId: Int = HANA_SECTOR_ID, debugOption: Bool = false) {
         self.id = id
         self.sectorId = sectorId
         
-        self.serviceManager = NavigationManager(id: id, region: region, sectorId: sectorId, debugOption: debugOption)
+        self.serviceManager = NavigationManager(id: id, region: HanaRegion.KOREA.rawValue, sectorId: sectorId, debugOption: debugOption)
         self.serviceManager?.delegate = self
     }
     
@@ -67,5 +68,15 @@ public class TJJupiterManager: NavigationManagerDelegate {
     
     public func stopService(completion: @escaping (Bool, String) -> Void) {
         serviceManager?.stopService(completion: completion)
+    }
+    
+    public func setNavigationDestination(dest: Point) {
+        serviceManager?.setNaviDestination(dest: dest.toJupiter())
+    }
+    
+    public func requestRouting(start: RoutingStart, end: Point, waypoints: [Point] = []) {
+        serviceManager?.requestRouting(start: start.toJupiter(), end: end.toJupiter(), waypoints: waypoints.map{$0.toJupiter()}, completion: { _ in
+            
+        })
     }
 }

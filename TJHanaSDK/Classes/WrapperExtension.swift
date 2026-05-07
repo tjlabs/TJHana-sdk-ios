@@ -11,6 +11,22 @@ extension UserMode {
     }
 }
 
+// MARK: - To Jupiter
+extension RoutingStart {
+    func toJupiter() -> TJLabsJupiter.RoutingStart {
+        return TJLabsJupiter.RoutingStart(level_id: self.level_id,
+                                          x: self.x,
+                                          y: self.y,
+                                          absolute_heading: self.absolute_heading)
+    }
+}
+
+extension Point {
+    func toJupiter() -> TJLabsJupiter.Point {
+        return TJLabsJupiter.Point(level_id: self.level_id, x: self.x, y: self.y)
+    }
+}
+
 // MARK: - To Wrap (Warp)
 extension TJLabsHana.WarpInitErrorCode {
     func toWrap() -> WarpInitErrorCode {
@@ -26,7 +42,22 @@ extension TJLabsHana.WarpErrorCode {
 
 extension TJLabsHana.WarpWard {
     func toWrap() -> WarpWard {
-        
+        return WarpWard(
+            id: self.id,
+            name: self.name,
+            rssi: self.rssi,
+            contents: self.contents.map { $0.toWrap() }
+        )
+    }
+}
+
+extension TJLabsHana.WardContents {
+    func toWrap() -> WardContents {
+        return WardContents(
+            id: self.id,
+            name: self.name,
+            url: self.url
+        )
     }
 }
 
@@ -62,8 +93,8 @@ extension TJLabsJupiter.InOutState {
 }
 
 extension TJLabsJupiter.InitErrorCode {
-    func toWrap() -> InitErrorCode {
-        return InitErrorCode(rawValue: self.rawValue) ?? .UNKNOWN
+    func toWrap() -> JupiterInitErrorCode {
+        return JupiterInitErrorCode(rawValue: self.rawValue) ?? .UNKNOWN
     }
 }
 

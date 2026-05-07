@@ -3,15 +3,15 @@ import TJLabsHana
 
 public class TJWarpView: UIView, TJLabsHana.WarpViewDelegate {
     public func onInitSuccess(_ view: TJLabsHana.WarpView, _ isSuccess: Bool, _ code: TJLabsHana.WarpInitErrorCode?) {
-        //
+        delegate?.onInitSuccess(self, isSuccess, code?.toWrap())
     }
     
     public func onWarpSuccess(_ view: TJLabsHana.WarpView, _ isSuccess: Bool, _ code: TJLabsHana.WarpErrorCode?) {
-        //
+        delegate?.onWarpSuccess(self, isSuccess, code?.toWrap())
     }
     
     public func onClick(_ view: TJLabsHana.WarpView, warpWards: [TJLabsHana.WarpWard]) {
-        //
+        delegate?.onClick(self, warpWards: warpWards.map { $0.toWrap() })
     }
     
     override init(frame: CGRect) {
@@ -26,11 +26,12 @@ public class TJWarpView: UIView, TJLabsHana.WarpViewDelegate {
     
     deinit {
         stopService()
+        warpView.delegate = nil
     }
     
     private var id: String?
     var warpView = WarpView()
-    var delegate: TJWarpViewDelegate?
+    public weak var delegate: TJWarpViewDelegate?
     
     public func initialize(id: String, sectorId: Int = HANA_SECTOR_ID, forceUpdate: Bool = false) {
         warpView.delegate = self
@@ -47,5 +48,13 @@ public class TJWarpView: UIView, TJLabsHana.WarpViewDelegate {
     
     public func stopService() {
         warpView.stopService()
+    }
+    
+    public func getVisibility() -> Bool {
+        return warpView.getVisibility()
+    }
+    
+    public func setVisibility(isVisible: Bool) {
+        warpView.setVisibility(isVisible: isVisible)
     }
 }

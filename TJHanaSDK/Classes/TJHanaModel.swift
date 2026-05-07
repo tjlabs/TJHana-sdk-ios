@@ -30,10 +30,6 @@ public enum WarpErrorCode: Int {
     case GENERATOR_FAIL = 3
 }
 
-public struct WarpContents: Codable {
-    public let wards: [WarpWard]
-}
-
 public struct WarpWard: Codable {
     public let id: Int
     public let name: String
@@ -90,7 +86,7 @@ public struct VenusResult: Codable {
 
 // MARK: - Jupiter
 public protocol TJJupiterManagerDelegate: AnyObject {
-    func onInitSuccess(_ manager: TJJupiterManager, _ isSuucess: Bool, _ code: InitErrorCode?)
+    func onInitSuccess(_ manager: TJJupiterManager, _ isSuccess: Bool, _ code: JupiterInitErrorCode?)
     func onJupiterSuccess(_ manager: TJJupiterManager, _ isSuccess: Bool, _ code: JupiterErrorCode?)
     func onJupiterReport(_ manager: TJJupiterManager, _ code: JupiterServiceCode, _ msg: String)
     func onJupiterResult(_ manager: TJJupiterManager, _ result: JupiterResult)
@@ -121,7 +117,7 @@ public enum InOutState: Int {
     case OUTDOOR = 3
 }
 
-public enum InitErrorCode: Int {
+public enum JupiterInitErrorCode: Int {
     case UNKNOWN = -1
     case INVALID_ID = 0
     case INVALID_MODE = 1
