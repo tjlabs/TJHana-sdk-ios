@@ -7,7 +7,6 @@ target 'TJHanaSDK_Example' do
 
   target 'TJHanaSDK_Tests' do
     inherit! :search_paths
-
     
   end
 end
