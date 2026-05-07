@@ -1,0 +1,16 @@
+PODS:
+  - TJHanaSDK (0.1.0)
+
+DEPENDENCIES:
+  - TJHanaSDK (from `../`)
+
+EXTERNAL SOURCES:
+  TJHanaSDK:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  TJHanaSDK: ca3fe235a2acffaaea0304ef02970d5d090dcb59
+
+PODFILE CHECKSUM: ebce8c1710166226f0246bda7192ede1fae424af
+
+COCOAPODS: 1.16.2
