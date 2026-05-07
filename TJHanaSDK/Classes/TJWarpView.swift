@@ -39,6 +39,7 @@ public class TJWarpView: UIView, TJLabsHana.WarpViewDelegate {
     }
     
     public func configureFrame(to matchView: UIView, warpImage: UIImage? = nil) {
+        warpView.isHidden = false
         warpView.configureFrame(to: matchView, warpImage: warpImage)
     }
     
