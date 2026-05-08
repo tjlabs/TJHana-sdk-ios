@@ -29,7 +29,7 @@ public class TJHanaAuth {
         let clientSdks = [
             SdkMeta(name: "TJLabsCommon", version: "0.1.0"),
             SdkMeta(name: "TJLabsResource", version: "0.1.0"),
-            SdkMeta(name: "TJLabsJupiter", version: "1.0.0"),
+            SdkMeta(name: "TJLabsJupiter", version: "2.0.0"),
             SdkMeta(name: "TJLabsHana", version: "1.0.0")
         ]
         
