@@ -179,6 +179,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/TJHanaSDK/TJHanaSDK.framework"
   install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/TJHanaSDK/TJLabsAuth.framework"
   install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/TJHanaSDK/TJLabsCommon.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/TJHanaSDK/TJLabsHana.framework"
   install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/TJHanaSDK/TJLabsJupiter.framework"
   install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/TJHanaSDK/TJLabsResource.framework"
 fi
@@ -186,6 +187,7 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/TJHanaSDK/TJHanaSDK.framework"
   install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/TJHanaSDK/TJLabsAuth.framework"
   install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/TJHanaSDK/TJLabsCommon.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/TJHanaSDK/TJLabsHana.framework"
   install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/TJHanaSDK/TJLabsJupiter.framework"
   install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/TJHanaSDK/TJLabsResource.framework"
 fi
