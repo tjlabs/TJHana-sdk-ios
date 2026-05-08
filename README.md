@@ -19,7 +19,11 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod 'TJHanaSDK'
 ```
+## 📌 Example
 
+- For a more detailed example, please refer to the demo project at the link below.
+- https://github.com/tjlabs/TJJupiterVM-demo-ios
+- 
 ## Author
 
 tjlabs-dev, 92098727+tjlabs-dev@users.noreply.github.com
