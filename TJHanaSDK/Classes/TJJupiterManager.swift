@@ -4,6 +4,7 @@ import TJLabsJupiter
 import TJLabsHana
     
 public class TJJupiterManager: NavigationManagerDelegate {
+    
     public func onInitSuccess(_ isSuccess: Bool, _ code: TJLabsJupiter.InitErrorCode?) {
         delegate?.onInitSuccess(self, isSuccess, code?.toWrap())
     }
@@ -28,12 +29,16 @@ public class TJJupiterManager: NavigationManagerDelegate {
         delegate?.isUserGuidanceOut()
     }
     
-    public func isNavigationRouteChanged(_ routes: [(String, String, Int, Float, Float)]) {
+    public func isUserArrived() {
+        delegate?.isUserArrived()
+    }
+    
+    public func isNavigationRouteChanged(_ routes: [(String, String, Float, Float)]) {
         delegate?.isNavigationRouteChanged(self, routes)
     }
     
-    public func isNavigationRouteFailed() {
-        delegate?.isNavigationRouteFailed()
+    public func isNavigationRouteFailed(_ reason: TJLabsJupiter.NavigationRouteFailureReason) {
+        delegate?.isNavigationRouteFailed(self, reason.toWrap())
     }
     
     public func isWaypointChanged(_ waypoints: [[Double]]) {
@@ -71,11 +76,13 @@ public class TJJupiterManager: NavigationManagerDelegate {
     }
     
     public func setNavigationDestination(dest: Point) {
-        serviceManager?.setNaviDestination(dest: dest.toJupiter())
+        serviceManager?.setNaviDestination(dest: dest.toJupiter(), isVehicle: true)
     }
     
     public func requestRouting(start: RoutingStart, end: Point, waypoints: [Point] = []) {
-        serviceManager?.requestRouting(start: start.toJupiter(), end: end.toJupiter(), waypoints: waypoints.map{$0.toJupiter()}, completion: { _ in
+        serviceManager?.requestRouting(start: start.toJupiter(),
+                                       end: end.toJupiter(),
+                                       waypoints: waypoints.map{$0.toJupiter()}, is_vehicle: true, completion: { _, _ in
             
         })
     }

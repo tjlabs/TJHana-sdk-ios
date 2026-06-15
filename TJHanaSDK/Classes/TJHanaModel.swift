@@ -14,6 +14,7 @@ public protocol TJWarpViewDelegate: AnyObject {
     func onInitSuccess(_ view: TJWarpView, _ isSuccess: Bool, _ code: WarpInitErrorCode?)
     func onWarpSuccess(_ view: TJWarpView, _ isSuccess: Bool, _ code: WarpErrorCode?)
     func onClick(_ view: TJWarpView, warpWards: [WarpWard])
+    func onWarpSelectionChanged(_ view: TJWarpView, warpWards: [WarpWard])
 }
 
 public enum WarpInitErrorCode: Int {
@@ -92,8 +93,9 @@ public protocol TJJupiterManagerDelegate: AnyObject {
     func onJupiterResult(_ manager: TJJupiterManager, _ result: JupiterResult)
     func isJupiterInOutStateChanged(_ manager: TJJupiterManager, _ state: InOutState)
     func isUserGuidanceOut()
-    func isNavigationRouteChanged(_ manager: TJJupiterManager, _ routes: [(String, String, Int, Float, Float)])
-    func isNavigationRouteFailed()
+    func isUserArrived()
+    func isNavigationRouteChanged(_ manager: TJJupiterManager, _ routes: [(String, String, Float, Float)])
+    func isNavigationRouteFailed(_ manager: TJJupiterManager, _ reason: NavigationRouteFailureReason)
     func isWaypointChanged(_ manager: TJJupiterManager, _ waypoints: [[Double]])
 }
 
@@ -148,6 +150,12 @@ public enum JupiterServiceCode: Int {
     case BLUETOOTH_OFF = 5
     case BLUETOOTH_SCAN_STOP = 6
     case NETWORK_DISCONNECT = 7
+}
+
+public enum NavigationRouteFailureReason: String, Codable {
+    case UNKNOWN = "unknown"
+    case SERVER_RESPONSE = "server_response"
+    case TOO_CLOSE = "too_close"
 }
 
 public struct JupiterResult: Codable {

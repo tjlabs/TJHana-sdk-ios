@@ -48,9 +48,10 @@ public class JupiterServiceManager : TJLabsJupiter.NavigationManagerDelegate {
   public func onJupiterResult(_ result: TJLabsJupiter.JupiterResult)
   public func onJupiterReport(_ code: TJLabsJupiter.JupiterServiceCode, _ msg: Swift.String)
   public func isJupiterInOutStateChanged(_ state: TJLabsJupiter.InOutState)
+  public func isUserArrived()
+  public func isNavigationRouteChanged(_ routes: [(Swift.String, Swift.String, Swift.Float, Swift.Float)])
+  public func isNavigationRouteFailed(_ reason: TJLabsJupiter.NavigationRouteFailureReason)
   public func isUserGuidanceOut()
-  public func isNavigationRouteChanged(_ routes: [(Swift.String, Swift.String, Swift.Int, Swift.Float, Swift.Float)])
-  public func isNavigationRouteFailed()
   public func isWaypointChanged(_ waypoints: [[Swift.Double]])
   weak public var delegate: (any TJLabsJupiter.NavigationManagerDelegate)?
   public init(id: Swift.String, region: Swift.String = HanaRegion.KOREA.rawValue, sectorId: Swift.Int, debugOption: Swift.Bool = false)
@@ -123,6 +124,7 @@ public protocol WarpViewDelegate : AnyObject {
   func onWarpSuccess(_ view: TJLabsHana.WarpView, _ isSuccess: Swift.Bool, _ code: TJLabsHana.WarpErrorCode?)
   #endif
   func onClick(_ view: TJLabsHana.WarpView, warpWards: [TJLabsHana.WarpWard])
+  func onWarpSelectionChanged(_ view: TJLabsHana.WarpView, warpWards: [TJLabsHana.WarpWard])
 }
 public enum WarpInitErrorCode : Swift.Int {
   case UNKNOWN
@@ -150,23 +152,26 @@ public enum WarpErrorCode : Swift.Int {
     get
   }
 }
-public struct WarpContents : Swift.Codable {
+public struct WarpContents : Swift.Codable, Swift.Equatable {
   public let wards: [TJLabsHana.WarpWard]
+  public static func == (a: TJLabsHana.WarpContents, b: TJLabsHana.WarpContents) -> Swift.Bool
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
-public struct WarpWard : Swift.Codable {
+public struct WarpWard : Swift.Codable, Swift.Equatable {
   public let id: Swift.Int
   public let name: Swift.String
   public let rssi: Swift.Int
   public let contents: [TJLabsHana.WardContents]
+  public static func == (a: TJLabsHana.WarpWard, b: TJLabsHana.WarpWard) -> Swift.Bool
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
-public struct WardContents : Swift.Codable {
+public struct WardContents : Swift.Codable, Swift.Equatable {
   public let id: Swift.Int
   public let name: Swift.String
   public let url: Foundation.URL
+  public static func == (a: TJLabsHana.WardContents, b: TJLabsHana.WardContents) -> Swift.Bool
   public func encode(to encoder: any Swift.Encoder) throws
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -184,6 +189,7 @@ public struct WardContents : Swift.Codable {
   #endif
   @_Concurrency.MainActor @preconcurrency public func getVisibility() -> Swift.Bool
   @_Concurrency.MainActor @preconcurrency public func setVisibility(isVisible: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency public func setSelectionInterval(seconds: Foundation.TimeInterval)
 }
 extension TJLabsHana.HanaRegion : Swift.Equatable {}
 extension TJLabsHana.HanaRegion : Swift.Hashable {}

@@ -2,6 +2,7 @@
 import TJLabsHana
 
 public class TJWarpView: UIView, TJLabsHana.WarpViewDelegate {
+    
     public func onInitSuccess(_ view: TJLabsHana.WarpView, _ isSuccess: Bool, _ code: TJLabsHana.WarpInitErrorCode?) {
         delegate?.onInitSuccess(self, isSuccess, code?.toWrap())
     }
@@ -12,6 +13,10 @@ public class TJWarpView: UIView, TJLabsHana.WarpViewDelegate {
     
     public func onClick(_ view: TJLabsHana.WarpView, warpWards: [TJLabsHana.WarpWard]) {
         delegate?.onClick(self, warpWards: warpWards.map { $0.toWrap() })
+    }
+    
+    public func onWarpSelectionChanged(_ view: TJLabsHana.WarpView, warpWards: [TJLabsHana.WarpWard]) {
+        delegate?.onWarpSelectionChanged(self, warpWards: warpWards.map { $0.toWrap()} )
     }
     
     override init(frame: CGRect) {
@@ -57,5 +62,9 @@ public class TJWarpView: UIView, TJLabsHana.WarpViewDelegate {
     
     public func setVisibility(isVisible: Bool) {
         warpView.setVisibility(isVisible: isVisible)
+    }
+    
+    public func setSelectionInterval(seconds: TimeInterval) {
+        warpView.setSelectionInterval(seconds: seconds)
     }
 }
