@@ -1,5 +1,5 @@
 # TJHanaSDK
-### Version 1.0.0
+### Version 1.0.1
 
 [![CI Status](https://img.shields.io/travis/tjlabs-dev/TJHanaSDK.svg?style=flat)](https://travis-ci.org/tjlabs-dev/TJHanaSDK)
 [![Version](https://img.shields.io/cocoapods/v/TJHanaSDK.svg?style=flat)](https://cocoapods.org/pods/TJHanaSDK)
@@ -128,6 +128,8 @@ extension ViewController: TJWarpViewDelegate {
     func onWarpSuccess(_ view: TJWarpView, _ isSuccess: Bool, _ code: WarpErrorCode?) {}
 
     func onClick(_ view: TJWarpView, warpWards: [WarpWard]) {}
+    
+    func onWarpSelectionChanged(_ view: TJWarpView, warpWards: [WarpWard]) {}
 }
 ```
 
@@ -266,9 +268,11 @@ extension ViewController: TJJupiterManagerDelegate {
 
     func isJupiterInOutStateChanged(_ manager: TJJupiterManager, _ state: InOutState) {}
 
+    func isUserArrived() {}
+    
     func isUserGuidanceOut() {}
 
-    func isNavigationRouteChanged(_ manager: TJJupiterManager, _ routes: [(String, String, Int, Float, Float)]) {}
+    func isNavigationRouteChanged(_ manager: TJJupiterManager, _ routes: [(String, String, Float, Float)]) {}
 
     func isNavigationRouteFailed() {}
 
@@ -342,23 +346,18 @@ public enum InOutState: Int {
 
 public enum JupiterInitErrorCode: Int {
     case UNKNOWN = -1
-    case INVALID_ID = 0
-    case INVALID_MODE = 1
+    case NOT_AUTHORIZED = 0
+    case INVALID_ID = 1
     case NETWORK_DISCONNECT = 2
-    case DUPLICATED_SERVICE = 3
-    case LOGIN_FAIL = 4
-    case CALC_INIT_FAIL = 5
+    case LOGIN_FAIL = 3
+    case LOAD_RESOURCE_FAIL = 4
 }
 
 public enum JupiterErrorCode: Int {
     case UNKNOWN = -1
-    case INVALID_ID = 0
-    case INVALID_MODE = 1
-    case NETWORK_DISCONNECT = 2
-    case DUPLICATED_SERVICE = 3
-    case LOGIN_FAIL = 4
-    case GENERATOR_FAIL = 5
-    case CALC_INIT_FAIL = 6
+    case NOT_INITIALIZED = 0
+    case DUPLICATED_SERVICE = 1
+    case GENERATOR_FAIL = 2
 }
 
 public enum JupiterServiceCode: Int {
