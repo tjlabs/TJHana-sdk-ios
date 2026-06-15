@@ -121,23 +121,18 @@ public enum InOutState: Int {
 
 public enum JupiterInitErrorCode: Int {
     case UNKNOWN = -1
-    case INVALID_ID = 0
-    case INVALID_MODE = 1
+    case NOT_AUTHORIZED = 0
+    case INVALID_ID = 1
     case NETWORK_DISCONNECT = 2
-    case DUPLICATED_SERVICE = 3
-    case LOGIN_FAIL = 4
-    case CALC_INIT_FAIL = 5
+    case LOGIN_FAIL = 3
+    case LOAD_RESOURCE_FAIL = 4
 }
 
 public enum JupiterErrorCode: Int {
     case UNKNOWN = -1
-    case INVALID_ID = 0
-    case INVALID_MODE = 1
-    case NETWORK_DISCONNECT = 2
-    case DUPLICATED_SERVICE = 3
-    case LOGIN_FAIL = 4
-    case GENERATOR_FAIL = 5
-    case CALC_INIT_FAIL = 6
+    case NOT_INITIALIZED = 0
+    case DUPLICATED_SERVICE = 1
+    case GENERATOR_FAIL = 2
 }
 
 public enum JupiterServiceCode: Int {

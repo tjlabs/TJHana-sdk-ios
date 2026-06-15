@@ -18,7 +18,9 @@ public class TJJupiterManager: NavigationManagerDelegate {
     }
     
     public func onJupiterReport(_ code: TJLabsJupiter.JupiterServiceCode, _ msg: String) {
-        delegate?.onJupiterReport(self, code.toWrap(), msg)
+        if code.rawValue < 8 {
+            delegate?.onJupiterReport(self, code.toWrap(), msg)
+        }
     }
     
     public func isJupiterInOutStateChanged(_ state: TJLabsJupiter.InOutState) {
