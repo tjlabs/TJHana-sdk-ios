@@ -2,6 +2,7 @@ import UIKit
 import TJLabsHana
 
 public class TJWarpView: UIView, TJLabsHana.WarpViewDelegate {
+    
     public func onInitSuccess(_ view: TJLabsHana.WarpView, _ isSuccess: Bool, _ code: TJLabsHana.WarpInitErrorCode?) {
         delegate?.onInitSuccess(self, isSuccess, code?.toWrap())
     }
