@@ -1,4 +1,4 @@
-
+import UIKit
 import TJLabsHana
 
 public class TJWarpView: UIView, TJLabsHana.WarpViewDelegate {
@@ -29,15 +29,16 @@ public class TJWarpView: UIView, TJLabsHana.WarpViewDelegate {
     }
     
     deinit {
-        stopService()
-        warpView.delegate = nil
+        tearDownWarpView()
     }
     
+    private var didTearDown = false
     private var id: String?
-    var warpView = WarpView()
+    private let warpView = WarpView()
     public weak var delegate: TJWarpViewDelegate?
     
     public func initialize(id: String, sectorId: Int = HANA_SECTOR_ID, forceUpdate: Bool = false) {
+        didTearDown = false
         warpView.delegate = self
         warpView.initialize(id: id, sectorId: sectorId, forceUpdate: forceUpdate)
     }
@@ -65,5 +66,25 @@ public class TJWarpView: UIView, TJLabsHana.WarpViewDelegate {
     
     public func setSelectionInterval(seconds: TimeInterval) {
         warpView.setSelectionInterval(seconds: seconds)
+    }
+    
+    private func tearDownWarpView() {
+        guard !didTearDown else { return }
+        didTearDown = true
+        
+        let warpView = self.warpView
+        if Thread.isMainThread {
+            Self.performTeardown(on: warpView)
+        } else {
+            DispatchQueue.main.async {
+                Self.performTeardown(on: warpView)
+            }
+        }
+    }
+    
+    private static func performTeardown(on warpView: WarpView) {
+        // Prevent teardown from reentering client callbacks.
+        warpView.delegate = nil
+        warpView.stopService()
     }
 }
