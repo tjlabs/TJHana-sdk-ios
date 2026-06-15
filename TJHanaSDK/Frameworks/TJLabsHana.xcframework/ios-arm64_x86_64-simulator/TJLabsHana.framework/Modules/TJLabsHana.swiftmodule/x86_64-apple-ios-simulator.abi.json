@@ -756,8 +756,8 @@
           },
           {
             "kind": "Function",
-            "name": "isUserGuidanceOut",
-            "printedName": "isUserGuidanceOut()",
+            "name": "isUserArrived",
+            "printedName": "isUserArrived()",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -766,8 +766,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:10TJLabsHana21JupiterServiceManagerC17isUserGuidanceOutyyF",
-            "mangledName": "$s10TJLabsHana21JupiterServiceManagerC17isUserGuidanceOutyyF",
+            "usr": "s:10TJLabsHana21JupiterServiceManagerC13isUserArrivedyyF",
+            "mangledName": "$s10TJLabsHana21JupiterServiceManagerC13isUserArrivedyyF",
             "moduleName": "TJLabsHana",
             "declAttributes": [
               "AccessControl"
@@ -787,12 +787,12 @@
               {
                 "kind": "TypeNominal",
                 "name": "Array",
-                "printedName": "[(Swift.String, Swift.String, Swift.Int, Swift.Float, Swift.Float)]",
+                "printedName": "[(Swift.String, Swift.String, Swift.Float, Swift.Float)]",
                 "children": [
                   {
                     "kind": "TypeNominal",
                     "name": "Tuple",
-                    "printedName": "(Swift.String, Swift.String, Swift.Int, Swift.Float, Swift.Float)",
+                    "printedName": "(Swift.String, Swift.String, Swift.Float, Swift.Float)",
                     "children": [
                       {
                         "kind": "TypeNominal",
@@ -805,12 +805,6 @@
                         "name": "String",
                         "printedName": "Swift.String",
                         "usr": "s:SS"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Int",
-                        "printedName": "Swift.Int",
-                        "usr": "s:Si"
                       },
                       {
                         "kind": "TypeNominal",
@@ -831,8 +825,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:10TJLabsHana21JupiterServiceManagerC24isNavigationRouteChangedyySaySS_SSSiS2ftGF",
-            "mangledName": "$s10TJLabsHana21JupiterServiceManagerC24isNavigationRouteChangedyySaySS_SSSiS2ftGF",
+            "usr": "s:10TJLabsHana21JupiterServiceManagerC24isNavigationRouteChangedyySaySS_SSS2ftGF",
+            "mangledName": "$s10TJLabsHana21JupiterServiceManagerC24isNavigationRouteChangedyySaySS_SSS2ftGF",
             "moduleName": "TJLabsHana",
             "declAttributes": [
               "AccessControl"
@@ -842,7 +836,33 @@
           {
             "kind": "Function",
             "name": "isNavigationRouteFailed",
-            "printedName": "isNavigationRouteFailed()",
+            "printedName": "isNavigationRouteFailed(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NavigationRouteFailureReason",
+                "printedName": "TJLabsJupiter.NavigationRouteFailureReason",
+                "usr": "s:13TJLabsJupiter28NavigationRouteFailureReasonO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10TJLabsHana21JupiterServiceManagerC23isNavigationRouteFailedyy0aC00gH13FailureReasonOF",
+            "mangledName": "$s10TJLabsHana21JupiterServiceManagerC23isNavigationRouteFailedyy0aC00gH13FailureReasonOF",
+            "moduleName": "TJLabsHana",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "isUserGuidanceOut",
+            "printedName": "isUserGuidanceOut()",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -851,8 +871,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:10TJLabsHana21JupiterServiceManagerC23isNavigationRouteFailedyyF",
-            "mangledName": "$s10TJLabsHana21JupiterServiceManagerC23isNavigationRouteFailedyyF",
+            "usr": "s:10TJLabsHana21JupiterServiceManagerC17isUserGuidanceOutyyF",
+            "mangledName": "$s10TJLabsHana21JupiterServiceManagerC17isUserGuidanceOutyyF",
             "moduleName": "TJLabsHana",
             "declAttributes": [
               "AccessControl"
@@ -2870,6 +2890,47 @@
             "protocolReq": true,
             "reqNewWitnessTableEntry": true,
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "onWarpSelectionChanged",
+            "printedName": "onWarpSelectionChanged(_:warpWards:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "WarpView",
+                "printedName": "TJLabsHana.WarpView",
+                "usr": "c:@M@TJLabsHana@objc(cs)WarpView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[TJLabsHana.WarpWard]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "WarpWard",
+                    "printedName": "TJLabsHana.WarpWard",
+                    "usr": "s:10TJLabsHana8WarpWardV"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10TJLabsHana16WarpViewDelegateP02onC16SelectionChanged_9warpWardsyAA0cD0C_SayAA0C4WardVGtF",
+            "mangledName": "$s10TJLabsHana16WarpViewDelegateP02onC16SelectionChanged_9warpWardsyAA0cD0C_SayAA0C4WardVGtF",
+            "moduleName": "TJLabsHana",
+            "genericSig": "<τ_0_0 where τ_0_0 : TJLabsHana.WarpViewDelegate>",
+            "sugared_genericSig": "<Self where Self : TJLabsHana.WarpViewDelegate>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Protocol",
@@ -3588,6 +3649,38 @@
             "implicit": true,
             "throwing": true,
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "WarpContents",
+                "printedName": "TJLabsHana.WarpContents",
+                "usr": "s:10TJLabsHana12WarpContentsV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "WarpContents",
+                "printedName": "TJLabsHana.WarpContents",
+                "usr": "s:10TJLabsHana12WarpContentsV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10TJLabsHana12WarpContentsV2eeoiySbAC_ACtFZ",
+            "mangledName": "$s10TJLabsHana12WarpContentsV2eeoiySbAC_ACtFZ",
+            "moduleName": "TJLabsHana",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Struct",
@@ -3626,6 +3719,13 @@
             "printedName": "Encodable",
             "usr": "s:SE",
             "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
           }
         ]
       },
@@ -3876,6 +3976,38 @@
             "implicit": true,
             "throwing": true,
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "WarpWard",
+                "printedName": "TJLabsHana.WarpWard",
+                "usr": "s:10TJLabsHana8WarpWardV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "WarpWard",
+                "printedName": "TJLabsHana.WarpWard",
+                "usr": "s:10TJLabsHana8WarpWardV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10TJLabsHana8WarpWardV2eeoiySbAC_ACtFZ",
+            "mangledName": "$s10TJLabsHana8WarpWardV2eeoiySbAC_ACtFZ",
+            "moduleName": "TJLabsHana",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Struct",
@@ -3913,6 +4045,13 @@
             "printedName": "Encodable",
             "usr": "s:SE",
             "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
           }
         ]
       },
@@ -4103,6 +4242,38 @@
             "implicit": true,
             "throwing": true,
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "WardContents",
+                "printedName": "TJLabsHana.WardContents",
+                "usr": "s:10TJLabsHana12WardContentsV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "WardContents",
+                "printedName": "TJLabsHana.WardContents",
+                "usr": "s:10TJLabsHana12WardContentsV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10TJLabsHana12WardContentsV2eeoiySbAC_ACtFZ",
+            "mangledName": "$s10TJLabsHana12WardContentsV2eeoiySbAC_ACtFZ",
+            "moduleName": "TJLabsHana",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Struct",
@@ -4140,6 +4311,13 @@
             "printedName": "Encodable",
             "usr": "s:SE",
             "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
           }
         ]
       },
@@ -4575,6 +4753,34 @@
               "AccessControl"
             ],
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setSelectionInterval",
+            "printedName": "setSelectionInterval(seconds:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10TJLabsHana8WarpViewC20setSelectionInterval7secondsySd_tF",
+            "mangledName": "$s10TJLabsHana8WarpViewC20setSelectionInterval7secondsySd_tF",
+            "moduleName": "TJLabsHana",
+            "declAttributes": [
+              "Preconcurrency",
+              "Custom",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Class",
@@ -4920,28 +5126,28 @@
     {
       "filePath": "\/Users\/leo\/SwiftProjects\/Frameworks\/TJLabsHana\/TJLabsHana\/JupiterServiceManager.swift",
       "kind": "StringLiteral",
-      "offset": 1345,
+      "offset": 1482,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/leo\/SwiftProjects\/Frameworks\/TJLabsHana\/TJLabsHana\/JupiterServiceManager.swift",
       "kind": "StringLiteral",
-      "offset": 1377,
+      "offset": 1514,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/leo\/SwiftProjects\/Frameworks\/TJLabsHana\/TJLabsHana\/JupiterServiceManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 1412,
+      "offset": 1549,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/leo\/SwiftProjects\/Frameworks\/TJLabsHana\/TJLabsHana\/JupiterServiceManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 1631,
+      "offset": 1768,
       "length": 5,
       "value": "false"
     },
@@ -5053,63 +5259,63 @@
     {
       "filePath": "\/Users\/leo\/SwiftProjects\/Frameworks\/TJLabsHana\/TJLabsHana\/VenusServiceManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 1959,
+      "offset": 1963,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/leo\/SwiftProjects\/Frameworks\/TJLabsHana\/TJLabsHana\/WarpModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 375,
+      "offset": 448,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/leo\/SwiftProjects\/Frameworks\/TJLabsHana\/TJLabsHana\/WarpModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 400,
+      "offset": 473,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/leo\/SwiftProjects\/Frameworks\/TJLabsHana\/TJLabsHana\/WarpModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 427,
+      "offset": 500,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/leo\/SwiftProjects\/Frameworks\/TJLabsHana\/TJLabsHana\/WarpModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 484,
+      "offset": 557,
       "length": 2,
       "value": "-1"
     },
     {
       "filePath": "\/Users\/leo\/SwiftProjects\/Frameworks\/TJLabsHana\/TJLabsHana\/WarpModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 514,
+      "offset": 587,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/leo\/SwiftProjects\/Frameworks\/TJLabsHana\/TJLabsHana\/WarpModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 545,
+      "offset": 618,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/leo\/SwiftProjects\/Frameworks\/TJLabsHana\/TJLabsHana\/WarpModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 577,
+      "offset": 650,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/leo\/SwiftProjects\/Frameworks\/TJLabsHana\/TJLabsHana\/WarpModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 605,
+      "offset": 678,
       "length": 1,
       "value": "3"
     },
@@ -5123,70 +5329,84 @@
     {
       "filePath": "\/Users\/leo\/SwiftProjects\/Frameworks\/TJLabsHana\/TJLabsHana\/WarpView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1306,
+      "offset": 1430,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/leo\/SwiftProjects\/Frameworks\/TJLabsHana\/TJLabsHana\/WarpView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1342,
+      "offset": 1466,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/leo\/SwiftProjects\/Frameworks\/TJLabsHana\/TJLabsHana\/WarpView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1382,
+      "offset": 1506,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/leo\/SwiftProjects\/Frameworks\/TJLabsHana\/TJLabsHana\/WarpView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1427,
+      "offset": 1551,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/leo\/SwiftProjects\/Frameworks\/TJLabsHana\/TJLabsHana\/WarpView.swift",
+      "kind": "StringLiteral",
+      "offset": 2062,
+      "length": 32,
+      "value": "\"com.tjlabs.hana.WarpView.state\""
+    },
+    {
+      "filePath": "\/Users\/leo\/SwiftProjects\/Frameworks\/TJLabsHana\/TJLabsHana\/WarpView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1874,
+      "offset": 2134,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/leo\/SwiftProjects\/Frameworks\/TJLabsHana\/TJLabsHana\/WarpView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1919,
+      "offset": 2179,
       "length": 1,
       "value": "6"
     },
     {
       "filePath": "\/Users\/leo\/SwiftProjects\/Frameworks\/TJLabsHana\/TJLabsHana\/WarpView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1969,
+      "offset": 2229,
       "length": 1,
       "value": "5"
     },
     {
       "filePath": "\/Users\/leo\/SwiftProjects\/Frameworks\/TJLabsHana\/TJLabsHana\/WarpView.swift",
       "kind": "BooleanLiteral",
-      "offset": 2031,
+      "offset": 2291,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/leo\/SwiftProjects\/Frameworks\/TJLabsHana\/TJLabsHana\/WarpView.swift",
       "kind": "BooleanLiteral",
-      "offset": 2474,
+      "offset": 2734,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/leo\/SwiftProjects\/Frameworks\/TJLabsHana\/TJLabsHana\/WarpView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2854,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/leo\/SwiftProjects\/Frameworks\/TJLabsHana\/TJLabsHana\/WarpView.swift",
       "kind": "BooleanLiteral",
-      "offset": 3083,
+      "offset": 3450,
       "length": 5,
       "value": "false"
     }

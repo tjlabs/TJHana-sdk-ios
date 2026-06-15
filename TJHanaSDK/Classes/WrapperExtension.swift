@@ -104,6 +104,12 @@ extension TJLabsJupiter.JupiterErrorCode {
     }
 }
 
+extension TJLabsJupiter.NavigationRouteFailureReason {
+    func toWrap() -> NavigationRouteFailureReason {
+        return NavigationRouteFailureReason(rawValue: self.rawValue) ?? .UNKNOWN
+    }
+}
+
 extension TJLabsJupiter.JupiterServiceCode {
     func toWrap() -> JupiterServiceCode {
         return JupiterServiceCode(rawValue: self.rawValue) ?? .UNKNOWN
