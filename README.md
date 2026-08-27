@@ -31,6 +31,8 @@ It provides authentication, Warp-based ward interaction UI, Venus-based indoor r
     - Privacy - Bluetooth Peripheral Usage Description
     - Privacy - Bluetooth Always Usage Description
     - Privacy - Location When In Use Usage Description
+    - App Transport Security Settings
+        - Allow Arbitrary Loads - YES
 - Recommended device capabilities
     - Accelerometer
     - Gyroscope
