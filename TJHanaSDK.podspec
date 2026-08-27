@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'TJHanaSDK'
-  s.version          = '1.0.5'
+  s.version          = '1.1.1'
   s.summary          = 'A short description of TJHanaSDK.'
   s.swift_version    = '5.0'
   s.description      = "TJLabs HanaSDK for iOS"
