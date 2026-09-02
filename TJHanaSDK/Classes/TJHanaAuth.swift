@@ -57,8 +57,8 @@ public class TJHanaAuth {
     }
     
     public func auth(accessKey: String, secretAccessKey: String, completion: @escaping (Int, Bool) -> Void) {
-        HanaLogger.setDebugOption(set: true)
-        JupiterLogger.setDebugOption(set: true)
+        HanaLogger.setDebugOption(set: false)
+        JupiterLogger.setDebugOption(set: false)
         
         TJLabsAuthManager.shared.auth(accessKey: accessKey, secretAccessKey: secretAccessKey, completion: completion)
     }
