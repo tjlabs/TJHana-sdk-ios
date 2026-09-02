@@ -70,8 +70,13 @@ public class TJJupiterManager: NavigationManagerDelegate {
         self.id = id
         self.sectorId = sectorId
         
-        self.serviceManager = JupiterServiceManager(id: id, region: HanaRegion.KOREA.rawValue, sectorId: sectorId, debugOption: debugOption, onPremiseBaseURL: ON_PREMISE_BASE_URL)
-        self.serviceManager?.delegate = self
+//        self.serviceManager = JupiterServiceManager(id: id, region: HanaRegion.KOREA.rawValue, sectorId: sectorId, debugOption: debugOption, onPremiseBaseURL: ON_PREMISE_BASE_URL)
+//        self.serviceManager?.delegate = self
+        // delegate는 생성 직후 할당되므로, 현재 실행 흐름이 끝난 뒤(비동기) 초기화 성공을 전달한다.
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self else { return }
+            self.delegate?.onInitSuccess(self, true, nil)
+        }
     }
     
     deinit {
@@ -95,15 +100,16 @@ public class TJJupiterManager: NavigationManagerDelegate {
     public func startService(resultIntervalMs: Int = 1000) {
         self.resultIntervalMs = max(1, resultIntervalMs)
         // 항상 DR(MODE_VEHICLE)로 강제 시작한다.
-        serviceManager?.startService(mode: UserMode.MODE_VEHICLE.toJupiter())
+//        serviceManager?.startService(mode: UserMode.MODE_VEHICLE.toJupiter())
         // startService 성공 시 delegate로 mock 결과를 전달한다.
         startMockService()
+        delegate?.onJupiterSuccess(self, true, nil)
     }
 
     public func stopService(completion: @escaping (Bool, String, JupiterServiceResult) -> Void) {
         stopMockTimer()
         stopResultTimer()
-        serviceManager?.stopService(completion: completion)
+//        serviceManager?.stopService(completion: completion)
     }
 
     // MARK: - Result delivery timer
@@ -170,19 +176,19 @@ public class TJJupiterManager: NavigationManagerDelegate {
         completion(SAMPLE_ROUTING_RESULT)
         
 //        guard let latestResult = self.latestResult else {
-//            completion(RoutingResult(routes: [], failureReason: .SERVER_RESPONSE))
+//            completion(RoutingResult(routes: [], failureReason: .INTERNAL_ERROR))
 //            return
 //        }
 //        guard let levelId = serviceManager?.getLevelId(sectorId: sectorId, buildingName: latestResult.building_name, levelName: latestResult.level_name) else {
-//            completion(RoutingResult(routes: [], failureReason: .SERVER_RESPONSE))
+//            completion(RoutingResult(routes: [], failureReason: .INTERNAL_ERROR))
 //            return
 //        }
 //        guard let scaleOffset = serviceManager?.getScaleOffset(sectorId: sectorId, buildingName: latestResult.building_name, levelName: latestResult.level_name) else {
-//            completion(RoutingResult(routes: [], failureReason: .SERVER_RESPONSE))
+//            completion(RoutingResult(routes: [], failureReason: .SCALE_OFFSET_ERROR))
 //            return
 //        }
 //        if scaleOffset.count < 4 {
-//            completion(RoutingResult(routes: [], failureReason: .SERVER_RESPONSE))
+//            completion(RoutingResult(routes: [], failureReason: .SCALE_OFFSET_ERROR))
 //            return
 //        }
 //        

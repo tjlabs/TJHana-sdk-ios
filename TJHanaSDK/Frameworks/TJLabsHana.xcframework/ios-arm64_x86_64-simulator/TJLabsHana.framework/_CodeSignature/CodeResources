@@ -10,7 +10,7 @@
 		</data>
 		<key>Modules/TJLabsHana.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		9aF0IL+RBojl3Ktkvpuqf4rhn8g=
+		ZyZba+eyAQYWOBYQBBJ9eVnQTfo=
 		</data>
 		<key>Modules/TJLabsHana.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>Modules/TJLabsHana.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		9aF0IL+RBojl3Ktkvpuqf4rhn8g=
+		ZyZba+eyAQYWOBYQBBJ9eVnQTfo=
 		</data>
 		<key>Modules/TJLabsHana.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -55,7 +55,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			LP6zhq7677vYBEDAqHUOqw2XqkjeLYfN9AiNH6bJUf0=
+			51n4go9Ce9XKOHjc2IT4OlVvOJyxYLqa0xWztw81F4Q=
 			</data>
 		</dict>
 		<key>Modules/TJLabsHana.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -90,7 +90,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			LP6zhq7677vYBEDAqHUOqw2XqkjeLYfN9AiNH6bJUf0=
+			51n4go9Ce9XKOHjc2IT4OlVvOJyxYLqa0xWztw81F4Q=
 			</data>
 		</dict>
 		<key>Modules/TJLabsHana.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>

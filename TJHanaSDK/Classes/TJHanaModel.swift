@@ -36,13 +36,13 @@ func makeMockJupiterResults(from routing: RoutingResult,
         return JupiterResult(
             mobile_time: index * intervalMs,   // 상대 오프셋(ms). 실제 전달 시점에 현재 시각으로 덮어씀.
             index: index,
-            building_name: "",
+            building_name: "그룹HQ",
             level_name: route.level_name,
             jupiter_pos: pos,
             navi_pos: pos,
             llh: nil,
             velocity: velocity,
-            is_vehicle: false,
+            is_vehicle: true,
             is_indoor: true,
             validity_flag: 1
         )
@@ -261,6 +261,8 @@ public enum JupiterServiceCode: Int {
 
 public enum NavigationRouteFailureReason: String, Codable {
     case UNKNOWN = "unknown"
+    case INTERNAL_ERROR = "internal_error"
+    case SCALE_OFFSET_ERROR = "scale_offset_error"
     case SERVER_RESPONSE = "server_response"
     case TOO_CLOSE = "too_close"
 }
