@@ -1,5 +1,5 @@
 PODS:
-  - TJHanaSDK (1.1.2)
+  - TJHanaSDK (1.1.5)
 
 DEPENDENCIES:
   - TJHanaSDK (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  TJHanaSDK: 22a9a11b1a3ac30400b1fa6d5d40bf46fc5ed565
+  TJHanaSDK: 47da750dfc153d0700d4340e596ef323380d238f
 
 PODFILE CHECKSUM: 4aa29d14e5a343a826581a93e35fa50edcb2d702
 
