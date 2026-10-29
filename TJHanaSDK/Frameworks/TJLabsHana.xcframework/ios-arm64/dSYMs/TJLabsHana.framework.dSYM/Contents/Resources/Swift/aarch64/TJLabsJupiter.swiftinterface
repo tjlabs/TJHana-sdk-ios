@@ -780,6 +780,7 @@ public class NavigationManager : TJLabsJupiter.JupiterManagerDelegate {
   public func setVehicleRouteFollowingDistance(_ distance: Swift.Float)
   public func cancelNavigation()
   public func setLSEAppName(name: Swift.String)
+  public func setLSEUseRfdWindow(enabled: Swift.Bool)
   #if compiler(>=5.3) && $NonescapableTypes
   public func getMatchedLevelId(key: Swift.String) -> Swift.Int?
   #endif
